@@ -25,7 +25,6 @@ app.use('/', function(req, res, next) {
 	proxy.pipe(res);
 });
 
-app.listen(process.env.PORT || 8080); 
+app.listen(process.env.PORT || 80); 
 
 
-sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
